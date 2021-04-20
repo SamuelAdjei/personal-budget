@@ -14,10 +14,13 @@ const router = express.Router();
 
 // middleware to use for all requests
 router.use((req, res, next) => {
+    console.log(`API is up`)
     next();
 });
 
+router.route('/category').post((req, res) => {
 
+})
 
 router.get('/', (req, res) => {
     res.status(200).json({ message: 'hooray! welcome to our api!' })
